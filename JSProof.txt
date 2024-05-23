@@ -1,0 +1,33 @@
+
+let nfts = [];
+
+function mintNFT(name, description, image) {
+    let nft = {
+      name: name,
+      description: description,
+      image: image
+    };
+    nfts.push(nft);
+  }
+  function listNFTs() {
+    for (let i = 0; i < nfts.length; i++) {
+      let nft = nfts[i];
+      console.log("Name: " + nft.name);
+      console.log("Description: " + nft.description);
+      console.log("Image: " + nft.image);
+      console.log("-------------------");
+    }
+  }
+  function getTotalSupply() {
+    console.log(nfts.length);
+  }
+
+
+  mintNFT("NFT1","tshirt","diamond");
+  mintNFT("NFT2","hoodie","gold");
+  mintNFT("NFT3","tanktop","silver");
+
+
+  listNFTs();
+
+  console.log("Total supply: "+ getTotalSupply());
